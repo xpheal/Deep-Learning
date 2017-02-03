@@ -18,7 +18,7 @@ survived
 died
 
 // The number of examples (will read this many in; ok to have more in the file)
-30
+20
 
 // The examples (we assume, for simplicity, that all features are 
 // BINARY-VALUED)
@@ -31,16 +31,6 @@ died
 // You may assume that the feature values are only the ones specified above
 // (ie, we will not be checking if you handle illegal input files).
 
-trainEx91	died     crew regular adult male
-trainEx92	survived crew regular adult male
-trainEx93	died     crew regular adult male
-trainEx94	survived passenger regular adult female
-trainEx95	survived crew regular adult male
-trainEx96	died     crew regular adult male
-trainEx97	died     crew regular adult male
-trainEx98	died     crew regular adult male
-trainEx99	survived passenger luxury adult female
-trainEx100	died     passenger luxury adult male
 trainEx101	survived passenger regular child female
 trainEx102	died     crew regular adult male
 trainEx103	died     crew regular adult male

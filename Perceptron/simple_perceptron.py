@@ -39,11 +39,11 @@ def load_example(scanner, num_examples):
 
 # python simple_perceptron.py trainset testset
 def get_args():
-	if not len(sys.argv) == 3:
-		print("Usage: python simple_perceptron.py <trainset> <testset>")
+	if not len(sys.argv) == 4:
+		print("Usage: python simple_perceptron.py <trainset> <tuneset> <testset>")
 		sys.exit()
 
-	return sys.argv[1], sys.argv[2]
+	return sys.argv[1], sys.argv[2], sys.argv[3]
 
 # Assumes that label is a boolean
 class Perceptron:
@@ -54,7 +54,7 @@ class Perceptron:
 		self.label_values = {name: idx for idx, name in enumerate(label_values)}
 		
 		self.weights = [rand.random() for i in range(num_features + 1)]
-		self.bias, self.threshold = rand.random(), 0
+		self.bias, self.threshold = 1, 0
 		self.learning_rate = learning_rate
 
 	def labels_to_numbers(self, labels):
@@ -73,7 +73,6 @@ class Perceptron:
 			diff = self.learning_rate * (labels[idx] - outcome)
 
 			self.weights = [w + diff * x for x, w in zip([self.bias] + row, self.weights)]
-			print(self.weights)
 
 	def predict(self, feature):
 		inp = sum([x * w for x, w in zip([self.bias] + feature, self.weights)])
@@ -94,21 +93,44 @@ class Perceptron:
 		return num_correct / num_cases
 
 def main():
-	trainset_name, testset_name = get_args()
+	trainset_name, tuneset_name, testset_name = get_args()
 
 	with open(trainset_name, 'r') as file:
 		scanner = file_parser(file)
 		num_features, num_train_examples, feature_names, feature_values, label_values = load_data(scanner)
 		train_set = load_example(scanner, num_train_examples)
 
+	with open(tuneset_name, 'r') as file:
+		scanner = file_parser(file)
+		_, num_tune_examples, _, _, _ = load_data(scanner)
+		tune_set = load_example(scanner, num_tune_examples)
+
 	with open(testset_name, 'r') as file:
 		scanner = file_parser(file)
 		_, num_test_examples, _, _, _ = load_data(scanner)
 		test_set = load_example(scanner, num_test_examples)
 
-	perceptron = Perceptron(num_features, feature_names, feature_values, label_values, learning_rate=1)
+	perceptrons = [Perceptron(num_features, feature_names, feature_values, label_values, learning_rate=0.1) for i in range(10)]
 
-	perceptron.train(train_set)
+	perceptron = perceptrons[0]
+
+	for i in range(10):
+		init_acc = perceptrons[i].test(tune_set)
+		loop = 0
+		patience = 5
+
+		while loop < patience:
+			loop += 1
+			perceptrons[i].train(train_set)
+
+			new_acc = perceptrons[i].test(tune_set)
+
+			if new_acc > init_acc:
+				init_acc = new_acc
+				loop = 0
+
+		if perceptrons[i].test(tune_set) > perceptron.test(tune_set):
+			perceptron = perceptrons[i]
 
 	print(perceptron.test(test_set))
 

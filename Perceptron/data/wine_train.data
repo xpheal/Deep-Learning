@@ -69,7 +69,7 @@ lowToMid
 midToHigh
 
 // The number of examples (will read this many in; ok to have more in the file)
-779
+708
 
 // The examples (as mentioned above, we assume, for simplicity, that all features are BOOLEAN-VALUED, 
 // *though the names of the two values might differ across datasets*)
@@ -788,74 +788,3 @@ trainEx705 lowToMid F T T F F T F F F F T T T T T T F F F F
 trainEx706 lowToMid F T F F F T F F F F T F T F F F F F F F
 trainEx707 midToHigh F F F T F F F F F F T T F T T T F T F F
 trainEx708 lowToMid F T T T F T F T F F T T F F F F F F F F
-trainEx709 midToHigh F T T F T T T F F F T F T T T T F T T T
-trainEx710 lowToMid F T T T F T F T F F T T F T T F F F F F
-trainEx711 lowToMid T T T T F F F F F F T T F T F F F T F F
-trainEx712 lowToMid F T T F F T F F F F T T F T F F F F F F
-trainEx713 midToHigh F T T F F T F F F F T T T T F F F F F F
-trainEx714 midToHigh F F F T F T F F F F T F F T F F F T T T
-trainEx715 lowToMid F T T F F T T T F F T F T T F F F T F F
-trainEx716 lowToMid F T F F F T T T T F T F F T F F F F F F
-trainEx717 lowToMid T T T T T T T F F F T T F F F F F T F F
-trainEx718 midToHigh F T F F F F F F F F F F F T F F F T T T
-trainEx719 midToHigh F T T F T T F F F F T F T T T F F T T F
-trainEx720 lowToMid F T T F F T F F F F T T T T F F F F F F
-trainEx721 midToHigh F T F F F T F F F F T T F F F F F F F F
-trainEx722 lowToMid F T T F F F F F F F T T T T T T F F F F
-trainEx723 lowToMid F T T F T T F F F F T T T F F F F T F F
-trainEx724 lowToMid F T T F F T F F F F T T T T T T F F F F
-trainEx725 lowToMid F T T T F T F T F F T T F T T F F F F F
-trainEx726 midToHigh F F F T F F F F F F T F T T F F F T T T
-trainEx727 midToHigh T F F T F F F F F F T F F T T T F T T T
-trainEx728 lowToMid F T F F F T F F F F T T F T T T F F F F
-trainEx729 midToHigh F T F T F T T F F F T F F T T T F T T T
-trainEx730 midToHigh F T T F F F F F F F T F T T T T F T T F
-trainEx731 lowToMid F T T F T T T F F F T T F T F F F F F F
-trainEx732 lowToMid F T F T F T T F F F T T T T F F F F F F
-trainEx733 lowToMid T T F T F T F F F F T T F F F F F F F F
-trainEx734 midToHigh T T F T F T T F F F T T F T T T F T F F
-trainEx735 midToHigh F F F T F F T F F F T F F T T T F T T F
-trainEx736 midToHigh F T F F F F T T F F F F T T T T F T T T
-trainEx737 lowToMid F T T F T T T T F F T T F F F F F F F F
-trainEx738 midToHigh T T F T T T T F F F T T F T T T F T T T
-trainEx739 midToHigh F F F T F F F F F F T F T T F F F T T T
-trainEx740 midToHigh F T T F F T F F F F T T F T F F F F F F
-trainEx741 midToHigh F F F T F F F F F F T T T T T T F F F F
-trainEx742 midToHigh F F F T F F T F F F T F T T T T F T T T
-trainEx743 lowToMid F T T F T F F F F F T T F F F F F T F F
-trainEx744 midToHigh T T T T T T F F F F T T F T T T F T T F
-trainEx745 midToHigh F T T F T T F F F F T T T F F F F T T F
-trainEx746 lowToMid F T T F F T T F F F T T T T T F F T F F
-trainEx747 lowToMid T T F T T T F F F F T T F T T F F T T F
-trainEx748 lowToMid F T F F F T T F F F T T F T F F F T F F
-trainEx749 midToHigh F F F T F T T F F F T F F T F F F T T F
-trainEx750 midToHigh T F F T F F F F F F T F F F F F F T T T
-trainEx751 lowToMid F T T F F T F F F F T F T F F F F F F F
-trainEx752 lowToMid F T T F F T F F F F T T T F F F F F F F
-trainEx753 lowToMid F F F T F T T T F F T T F T F F F F F F
-trainEx754 lowToMid F T F F F T T T T F T T F T T T T F F F
-trainEx755 lowToMid F T T F F T T T T F T T F T F F F F F F
-trainEx756 lowToMid F T T F F T F F F F T T F F F F F F F F
-trainEx757 lowToMid F T T F F T T T T F T T F F F F F T F F
-trainEx758 midToHigh F T F T T T F F F F T T F T T F F T T T
-trainEx759 midToHigh F F F T F F T F F F T T T T T T F T T T
-trainEx760 lowToMid F T T F F T F F F F T T T T T T F T F F
-trainEx761 lowToMid T F F T T T F F F F T T F T T F F T T F
-trainEx762 lowToMid F T T F F T F T F F T T F T F F F F F F
-trainEx763 midToHigh F T T F F T T F F F T T F T T T F T T F
-trainEx764 lowToMid F T T F F T F F F F T T T F F F F T F F
-trainEx765 midToHigh F T F T F T F F F F T T F T T T F F F F
-trainEx766 lowToMid F T T F F T T F F F T T T F F F F F F F
-trainEx767 lowToMid F F F T T T F F F F T T T T T T F T T F
-trainEx768 lowToMid F T T F T T F F F F T T T F F F F T F F
-trainEx769 midToHigh F F F T T T F F F F T T F T F F F T T T
-trainEx770 midToHigh F T F T T T F F F F T T F T T F F T T T
-trainEx771 midToHigh T F F T F T F F F F T T F T T T F F F F
-trainEx772 midToHigh F T T T T T T F F F T T T T T T F T T T
-trainEx773 lowToMid F T F T F T F F F F T T T F F F F F F F
-trainEx774 lowToMid T T F T T T F F F F T T F T F F F T T F
-trainEx775 midToHigh F F F T F T F F F F T F T T T T F T T T
-trainEx776 midToHigh F T F F F T F F F F T T T F F F F F F F
-trainEx777 lowToMid F T F F F F T T F F T F T T T F F T T T
-trainEx778 lowToMid T F F T F T F F F F T T F T T T F F F F
-trainEx779 midToHigh F T T F F F T F F F T T T T F F F T T T
