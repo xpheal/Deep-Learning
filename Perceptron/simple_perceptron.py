@@ -77,7 +77,7 @@ class Perceptron:
 	def predict(self, feature):
 		inp = sum([x * w for x, w in zip([self.bias] + feature, self.weights)])
 		
-		if inp > self.threshold:
+		if inp >= self.threshold:
 			return 1
 		else:
 			return 0
