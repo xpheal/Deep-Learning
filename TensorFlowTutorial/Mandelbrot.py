@@ -1,3 +1,5 @@
+#TODO: Very inefficient implementation, the network keeps on calculating even though the value has diverged
+#MAYBE: Instead of using a whole numpy array as one tensor node, split the whole array into nodes, once a node diverged, don't run it
 import tensorflow as tf
 import numpy as np
 import PIL.Image
