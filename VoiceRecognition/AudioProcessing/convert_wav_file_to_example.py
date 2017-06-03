@@ -24,7 +24,7 @@ class Audio():
 		if duration == -1:
 			return points
 		else:
-			return points[:self.get_sample_size(duration)]
+			return points[:self.get_sample_size(duration/1000)]
 
 	# Return a floating point time series of the audio file 
 	def time_series(self):
@@ -32,7 +32,7 @@ class Audio():
 	
 	# Return the sample size for the given duration, return the maximum length of the sample size if duration exceed the sample's duration
 	def get_sample_size(self, duration):
-		return min(self.rate * duration, self.total_sample_size)
+		return min(int(self.rate * duration/1000), self.total_sample_size)
 	
 	# Play the audio file for the given duration, play the whole file if duration is not given
 	def play(self, duration=-1):
