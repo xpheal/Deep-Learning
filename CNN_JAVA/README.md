@@ -3,6 +3,8 @@
 This folder contains a convolutional neural network written from scratch in JAVA.  
 This is written for a Deep Neural Network class. The code is written to be easily understandable than efficient.  
 
+Results of the classifier can be found in [Result_Analysis.pdf](https://github.com/xpheal/Deep-Learning/blob/master/CNN_JAVA/Result_Analysis.pdf)  
+
 Classes in CNNClassifier.java:  
 1) CNNetwork: Convolutional Neural Network, controls all the layers, input, output, feedforward, backpropagation  
 2) NeuralNetwork: A complete neural network, used for the hiddenlayer and outputlayer of the CNN  
